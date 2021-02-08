@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 export default function TodoList() {
@@ -7,6 +8,17 @@ export default function TodoList() {
     message: "Loading, plz wait",
     todos: null,
   });
+
+  useEffect(() => {
+    async function fetchTodos() {
+      const data = await axios.get(
+        "https://jsonplaceholder.typicode.com/todos"
+      );
+      console.log(data);
+    }
+
+    fetchTodos();
+  }, []);
 
   console.log(data);
 
