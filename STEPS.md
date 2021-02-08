@@ -4,7 +4,7 @@
 
 - [x] Make a TodoList Component
 - [ ] fetch the todos
-  - [ ] useState (store todos -> initial state)
+  - [x] useState (store todos -> initial state)
   - [ ] useEffect
   - [ ] axios get
   - [ ] We need api (fake api)
