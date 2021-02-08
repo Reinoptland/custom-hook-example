@@ -1,3 +1,4 @@
+import Todo from "./Todo";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -33,9 +34,7 @@ export default function TodoList() {
       LIST{" "}
       <div>
         {data.todos?.map((todo) => (
-          <div>
-            {todo.title} <input type="checkbox" checked={todo.completed} />
-          </div>
+          <Todo title={todo.title} completed={todo.completed} />
         ))}
       </div>
     </div>
