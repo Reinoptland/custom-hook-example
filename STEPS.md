@@ -15,3 +15,19 @@
   - [x] Error Component
 - [x] (LOADING) display a spinner
   - [x] Loading component
+
+## Options
+
+Is the responsibility displaying something (UI)
+
+- Components -> Todo
+
+Is the responsibility a logic that has nothing to do with React?
+
+- Function -> format a string, do Math, display readable output
+
+Do you need React behaviour for some logic you want to delegate?
+
+- useState, useEffect, useRef, useMemo, useCallback
+- Other library hooks: useParams
+- Hooks -> fetching, effects, validation
