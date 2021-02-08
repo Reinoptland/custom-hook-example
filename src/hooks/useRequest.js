@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export default function useRequest() {
+export default function useRequest(url) {
   const [data, setData] = useState({
     status: "loading",
     statusCode: null,
@@ -12,9 +12,7 @@ export default function useRequest() {
   useEffect(() => {
     async function fetchTodos() {
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/todos"
-        );
+        const response = await axios.get(url);
         setData({
           status: "success",
           statusCode: response.status,

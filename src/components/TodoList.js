@@ -5,8 +5,28 @@ import Error from "./Error";
 import useRequest from "../hooks/useRequest";
 import { makeUrgent } from "../utils/upperCase";
 
+// function useRequest(){
+//   return {
+//     status: "success",
+//     statusCode: 200,
+//     message: "",
+//     data: [{}, {}, {}],
+//   }
+// }
+
+// function useRequest(){
+//   return {
+//     status: "loading",
+//     statusCode: null,
+//     message: "Loading plz wait",
+//     data: null,
+//   }
+// }
+
 export default function TodoList() {
-  const { status, statusCode, message, data } = useRequest();
+  const { status, statusCode, message, data } = useRequest(
+    "https://jsonplaceholder.typicode.com/todos"
+  );
 
   return (
     <div>
