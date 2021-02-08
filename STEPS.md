@@ -8,5 +8,9 @@
   - [ ] useEffect
   - [ ] axios get
   - [ ] We need api (fake api)
-- [ ] map the todos -> JSX
+- [ ] (SUCCESS) map the todos -> JSX
   - [ ] Todo Component
+- [ ] (ERRORS) display some feedback -> JSX
+  - [ ] Error Component
+- [ ] (LOADING) display a spinner
+  - [ ] Loading component
