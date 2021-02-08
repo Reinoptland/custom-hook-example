@@ -28,5 +28,16 @@ export default function TodoList() {
 
   console.log("DATA IN COMPONENT:", data);
 
-  return <div>LIST</div>;
+  return (
+    <div>
+      LIST{" "}
+      <div>
+        {data.todos?.map((todo) => (
+          <div>
+            {todo.title} <input type="checkbox" checked={todo.completed} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

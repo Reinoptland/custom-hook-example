@@ -9,7 +9,7 @@
   - [x] axios get
   - [x] We need api (fake api)
   - [x] set the state
-- [ ] (SUCCESS) map the todos -> JSX
+- [x] (SUCCESS) map the todos -> JSX
   - [ ] Todo Component
 - [ ] (ERRORS) display some feedback -> JSX
   - [ ] Error Component
