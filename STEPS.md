@@ -10,7 +10,7 @@
   - [x] We need api (fake api)
   - [x] set the state
 - [x] (SUCCESS) map the todos -> JSX
-  - [ ] Todo Component
+  - [x] Todo Component
 - [ ] (ERRORS) display some feedback -> JSX
   - [ ] Error Component
 - [ ] (LOADING) display a spinner

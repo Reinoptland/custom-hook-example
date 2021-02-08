@@ -12,16 +12,36 @@ export default function TodoList() {
 
   useEffect(() => {
     async function fetchTodos() {
-      const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/todos"
-      );
-      console.log("DATA IN USEFFECT:", response);
-      setData({
-        status: "success",
-        statusCode: response.status,
-        message: response.statusText,
-        todos: response.data,
-      });
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/tods"
+        );
+        setData({
+          status: "success",
+          statusCode: response.status,
+          message: response.statusText,
+          todos: response.data,
+        });
+      } catch (error) {
+        console.log(error.response);
+        let message = "";
+        switch (error.response.status) {
+          case 404:
+            message = "Not found, does this list exist?";
+            break;
+
+          default:
+            message = "Something went wrong, try to refresh";
+            break;
+        }
+
+        setData({
+          status: "error",
+          statusCode: error.response.status,
+          message: message,
+          todos: null,
+        });
+      }
     }
 
     fetchTodos();
