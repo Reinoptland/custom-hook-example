@@ -11,16 +11,22 @@ export default function TodoList() {
 
   useEffect(() => {
     async function fetchTodos() {
-      const data = await axios.get(
+      const response = await axios.get(
         "https://jsonplaceholder.typicode.com/todos"
       );
-      console.log(data);
+      console.log("DATA IN USEFFECT:", response);
+      setData({
+        status: "success",
+        statusCode: response.status,
+        message: response.statusText,
+        todos: response.data,
+      });
     }
 
     fetchTodos();
   }, []);
 
-  console.log(data);
+  console.log("DATA IN COMPONENT:", data);
 
   return <div>LIST</div>;
 }
