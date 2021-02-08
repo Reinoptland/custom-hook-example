@@ -11,7 +11,7 @@
   - [x] set the state
 - [x] (SUCCESS) map the todos -> JSX
   - [x] Todo Component
-- [ ] (ERRORS) display some feedback -> JSX
-  - [ ] Error Component
-- [ ] (LOADING) display a spinner
-  - [ ] Loading component
+- [x] (ERRORS) display some feedback -> JSX
+  - [x] Error Component
+- [x] (LOADING) display a spinner
+  - [x] Loading component
